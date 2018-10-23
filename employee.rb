@@ -6,6 +6,18 @@ class Employee
     @active = input_active
   end
 
+  def first_name
+    @first_name
+  end
+
+  def last_name
+    @last_name
+  end
+
+  def active
+    @active
+  end
+
   def print_info
     puts "#{@first_name} #{@last_name} makes #{@salary} a year."
   end
@@ -17,8 +29,12 @@ class Employee
 end
 
 
-
 employee_1 = Employee.new("Andrew", "Stein", 150000, true)
 
 employee_1.print_info
 employee_1.give_annual_raise
+p employee_1.first_name.reverse.upcase
+p employee_1.active
+
+
+
