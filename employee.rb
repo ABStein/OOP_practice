@@ -1,6 +1,6 @@
 class Employee
   #this runs everytime we create a new instance of this class e.g. employee_1
-  def initialize(input_first_name, input_last_name, input_salary, input_active) #anything inside these commas are arguments which we use to create a new intance of the the "Employee Class" with attributes.
+  def initialize(input_first_name, input_last_name, input_salary, input_active) #anything inside these commas are arguments which we use to create a new intance of the the "Employee Class" with attributes ad this is always called when creating a new instance.
     # @ = instance variables or attributes define what an object is, can be accesed anywhere within the instance of a class
     @first_name = input_first_name
     @last_name  = input_last_name
@@ -16,8 +16,12 @@ class Employee
     @last_name
   end
 
-  def active
+  def active # reader method
     @active
+  end
+
+  def active=(new_active) # writer method
+    @active = new_active
   end
 
   def print_info
@@ -53,16 +57,21 @@ puts hash.class
 #
 # interpolation - example: "#{employee_1[0]} #{employee_1[1]} makes coolness."  ===== this is the preferred method of adding elements together.
 
-employee_1 = {"first_name" => "Jimmy", "last_name" => "Brom", "salary" => 80000}
+# employee_1 = {"first_name" => "Jimmy", "last_name" => "Brom", "salary" => 80000}
 
 # using a hash to our advantage with interpolation
-puts "#{employee_1["first_name"]} #{employee_1["last_name"]} makes #{employee_1["salary"]} a year."
+# puts "#{employee_1["first_name"]} #{employee_1["last_name"]} makes #{employee_1["salary"]} a year."
 
 #advantages of using a hash - each thing has a label, can't duplicate unformation, easier for the computer to find things rather than looping though a huge array, this is just data so to add behavior to this data we can add a class.
 
 # This is a hash and calling those attributes with a bettr syntax, the colon is known as a symbol
 
-employee_1 = {first_name: "Jimmy", last_name: "Brom", salary: 80000, active: true}
+# employee_1 = {first_name: "Jimmy", last_name: "Brom", salary: 80000, active: true}
 
-puts "#{employee_1[:first_name]} #{employee_1[:last_name]} makes #{employee_1[:salary]} a year."
+# puts "#{employee_1[:first_name]} #{employee_1[:last_name]} makes #{employee_1[:salary]} a year."
+
+
+p employee_1.active
+p employee_1.active = false
+p employee_1.active
 
