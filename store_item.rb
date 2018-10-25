@@ -32,14 +32,22 @@ computer_2 = Computer.new(
 p computer_1
 p computer_2
 
+class SuperComputer < Computer
+  def edit_video
+    puts "rendering..."
+    puts "Rendered"
+  end
+end
 
-# p computer_1.overclocked
-# computer_1.underclocked(0.75)
-# p computer_1.overclocked
+
+super_computer = SuperComputer.new(
+                                   cpu_frequency: 5.5,
+                                   ram: "128gb",
+                                   motherboard: "x299",
+                                   gpu: "Titan Xp"
+                                   )
 
 
-
-# "My computer has a cpu clocked at #{computer_1[:cpu_frequency]} on a #{computer_1[:motherboard]} motherboard with #{computer_1[:ram]} of ram, and a #{computer_1[:gpu]}. However I overclocked the cpu to #{computer_1[:cpu_frequency.overclocked]} "
-
+super_computer.edit_video
 
 

@@ -57,18 +57,15 @@ puts hash.class
 #
 # interpolation - example: "#{employee_1[0]} #{employee_1[1]} makes coolness."  ===== this is the preferred method of adding elements together.
 
-# employee_1 = {"first_name" => "Jimmy", "last_name" => "Brom", "salary" => 80000}
-
 # using a hash to our advantage with interpolation
+# employee_1 = {"first_name" => "Jimmy", "last_name" => "Brom", "salary" => 80000}
 # puts "#{employee_1["first_name"]} #{employee_1["last_name"]} makes #{employee_1["salary"]} a year."
 
 #advantages of using a hash - each thing has a label, can't duplicate unformation, easier for the computer to find things rather than looping though a huge array, this is just data so to add behavior to this data we can add a class.
 
 # This is a hash and calling those attributes with a bettr syntax, the colon is known as a symbol
-
 # employee_1 = {first_name: "Jimmy", last_name: "Brom", salary: 80000, active: true}
 
-# puts "#{employee_1[:first_name]} #{employee_1[:last_name]} makes #{employee_1[:salary]} a year."
 
 
 p employee_1.active
