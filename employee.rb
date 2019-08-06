@@ -45,13 +45,13 @@ p employee_1.active
 
 
 #can't print a hash all on its own e.g. puts {"hi" => "mom"}.class
-hash = {"hi" => "mom"}
-puts hash.class
+# hash = {"hi" => "mom"}
+# puts hash.class
 
 
 #2 ways to join elements together in ruby
 #
-# employee_1 = ["Andrew", "Stein", 150000, true]
+employee_1 = ["Andrew", "Stein", 150000, true]
 #
 # concatenation - example: puts employee_1[0] + " " + employee_1[1] + " is awesome."
 #
@@ -66,9 +66,4 @@ puts hash.class
 # This is a hash and calling those attributes with a bettr syntax, the colon is known as a symbol
 # employee_1 = {first_name: "Jimmy", last_name: "Brom", salary: 80000, active: true}
 
-
-
-p employee_1.active
-p employee_1.active = false
-p employee_1.active
 

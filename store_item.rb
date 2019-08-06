@@ -13,7 +13,12 @@ class Computer
   def overclocked
     @cpu_frequency = @cpu_frequency * 1.25
   end
+
+  def print_info
+    puts "#{@cpu_frequency} is the frequency this computer is running with #{@ram} of ram, on a #{@motherboard} with a #{gpu} for video."
+  end
 end
+
 
 computer_1 = Computer.new(
                           cpu_frequency: 3.8,
@@ -31,6 +36,7 @@ computer_2 = Computer.new(
 
 p computer_1
 p computer_2
+computer_2.print_info
 
 class SuperComputer < Computer
   def edit_video
